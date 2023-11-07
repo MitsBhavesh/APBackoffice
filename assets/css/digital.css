@@ -1,0 +1,336 @@
+.ribbon{width:188px;height:188px;position:absolute;top:-8px;right:-8px;overflow:hidden;text-transform:uppercase;color:#fff; font-size:16px;}
+   .ribbon:before,.ribbon:after{content:"";position:absolute}
+   .ribbon:before{width:40px;height:8px;right:100px;background:#147208;border-radius:8px 8px 0 0}
+   .ribbon:after{width:8px;height:40px;right:0;top:100px;background:#147208;border-radius:0 8px 8px 0}
+   .ribbon span {width:200px;height:40px;line-height:40px;position:absolute;top:30px;right:-50px;z-index:2;overflow:hidden;-webkit-transform:rotate(45deg);transform:rotate(45deg);background: #0b5639; background: linear-gradient(#065233 0%, #0c3e2e 100%);text-align:center}
+
+   .ribbon_sales{width:188px;height:188px;position:absolute;top:-8px;right:-8px;overflow:hidden;text-transform:uppercase;color:#fff; font-size:16px;}
+   .ribbon_sales:before,.ribbon_sales:after{content:"";position:absolute}
+   .ribbon_sales:before{width:40px;height:8px;right:100px;background:#6b7208;border-radius:8px 8px 0 0}
+   .ribbon_sales:after{width:8px;height:40px;right:0;top:100px;background:#6b7208;border-radius:0 8px 8px 0}
+   .ribbon_sales span {width:200px;height:40px;line-height:40px;position:absolute;top:30px;right:-50px;z-index:2;overflow:hidden;-webkit-transform:rotate(45deg);transform:rotate(45deg);background: #0b5639; background: linear-gradient(#d9b711 0%, #5c6607 100%);text-align:center}
+   .ribbon_product{width:188px;height:188px;position:absolute;top:-8px;right:-8px;overflow:hidden;text-transform:uppercase;color:#fff; font-size:16px;}
+   .ribbon_product:before,.ribbon_product:after{content:"";position:absolute}
+   .ribbon_product:before{width:40px;height:8px;right:100px;background:#0f1d99;border-radius:8px 8px 0 0}
+   .ribbon_product:after{width:8px;height:40px;right:0;top:100px;background:#0f1d99;border-radius:0 8px 8px 0}
+   .ribbon_product span {width:200px;height:40px;line-height:40px;position:absolute;top:30px;right:-50px;z-index:2;overflow:hidden;-webkit-transform:rotate(45deg);transform:rotate(45deg);background: #0b5639; background: linear-gradient(#4c59d9 0%, #0d1878 100%);text-align:center}
+   .box{
+   background-image: url(https://images.unsplash.com/photo-1621214848461-f7dfeeffe945?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0OTMzMTU3Mg&ixlib=rb-1.2.1&q=85);
+   background-size: cover;
+   height: 100px;
+   width: 100px;
+   background-color: #ffffff;
+   box-shadow: 0 0 16px #bb6d40;
+   border-radius: 15px;
+   transition: 0.4s;
+   }
+   .box:hover{
+   pointer: url(https://www.pngkey.com/png/full/433-4335585_bg-light-grey.png);
+   transform: scale(1.1, 1.1);
+   box-shadow:0 0 60px rgb(169 129 129 / 70%);
+   }
+  
+   .buttonDownload {
+   display: inline-block;
+   position: relative;
+   padding: 10px 25px;
+  
+   background-color: #4CC713;
+   color: white;
+  
+   font-family: sans-serif;
+   text-decoration: none;
+   font-size: 0.9em;
+   text-align: center;
+   text-indent: 15px;
+}
+
+.buttonDownload:hover {
+   background-color: #333;
+   color: white;
+}
+
+.buttonDownload:before, .buttonDownload:after {
+   content: ' ';
+   display: block;
+   position: absolute;
+   left: 15px;
+   top: 52%;
+}
+
+/* Download box shape  */
+.buttonDownload:before {
+   width: 10px;
+   height: 2px;
+   border-style: solid;
+   border-width: 0 2px 2px;
+}
+
+/* Download arrow shape */
+.buttonDownload:after {
+   width: 0;
+   height: 0;
+   margin-left: 3px;
+   margin-top: -7px;
+  
+   border-style: solid;
+   border-width: 4px 4px 0 4px;
+   border-color: transparent;
+   border-top-color: inherit;
+   
+   animation: downloadArrow 2s linear infinite;
+   animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+   border-color: #4CC713;
+}
+
+.buttonDownload:hover:after {
+   border-top-color: #4CC713;
+   animation-play-state: running;
+}
+
+/* keyframes for the download icon anim */
+@keyframes downloadArrow {
+   /* 0% and 0.001% keyframes used as a hackish way of having the button frozen on a nice looking frame by default */
+   0% {
+      margin-top: -7px;
+      opacity: 1;
+   }
+   
+   0.001% {
+      margin-top: -15px;
+      opacity: 0;
+   }
+   
+   50% {
+      opacity: 1;
+   }
+   
+   100% {
+      margin-top: 0;
+      opacity: 0;
+   }
+}
+
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card1 {
+  margin: 30px auto;
+  width: 75px;
+  height: 75px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card1 .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card1 .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card1 .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card1:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}
+
+.title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .card-list {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+
+/*
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  transition: 0.4s;
+}
+*/
+
+/*sharing button css */
+
+$background:#B2B1CF;
+$white:#fff;
+.menu{
+  z-index:999;
+  position:fixed;
+  padding:0;
+  margin:0;
+  list-style-type:none;
+  .share{
+    i.fa{
+      height:50px;
+      width:50px;
+      text-align:center;
+      line-height:50px;
+      background-color: #fff;
+      border-radius:2px;
+    }
+    &:hover{
+      &.bottom {
+        .submenu{
+          @for $i from 1 through 5{
+            li:nth-child(#{$i}){
+              opacity:1;
+              top:#{$i*50}px;
+              transform:rotate(0deg);
+              border-top:1px dashed darken($white,20%);
+              transition-delay:#{$i*0.08}s;
+            }
+          }
+        }
+      }
+      &.left{
+        .submenu{
+          @for $i from 1 through 5{
+            li:nth-child(#{$i}){
+              opacity:1;
+              left:#{-$i*51}px;
+              transform:rotate(0deg);
+              transition-delay:#{$i*0.5}s;
+              border-right:1px dashed darken($white,20%);
+            }
+          }
+        } 
+      }
+      &.right{
+        .submenu{
+          @for $i from 1 through 5{
+            li:nth-child(#{$i}){
+              opacity:1;
+              left:#{$i*50}px;
+              transform:rotate(0deg);
+              transition-delay:#{$i*0.08}s;
+              border-left:1px dashed darken($white,20%);
+            }
+          }
+        }
+      }
+      &.top{
+        .submenu{
+          @for $i from 1 through 5{
+            li:nth-child(#{$i}){
+              opacity:1;
+              top:#{-$i*51}px;
+               transition-delay:#{$i*0.08}s;
+              transform:rotateY(0deg);
+              border-bottom:1px dashed darken($white,15%);
+            }
+          }
+        }
+      }
+    }
+  }
+  .submenu{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    li{
+      transition:all ease-in-out 0.5s;
+      position:absolute;
+      top: 0;
+      left: 0;
+      z-index:-1;
+      opacity:0;
+      a{
+        color: #212121;
+        &:hover{
+          i.fa{
+            color:#fff;
+          }
+          &.facebook{
+            i.fa{
+               background-color: #3b5999;
+            }
+          }
+          &.twitter{
+            i.fa{
+              background-color: #55acee;
+            }
+          }
+          &.googlePlus{
+            i.fa{
+              background-color: #dd4b39;
+            }
+          }
+          &.instagram{
+            i.fa{
+              background-color: #e4405f;
+            }
+          }
+        }
+      }
+    }
+    @for $i from 1 through 4{
+      li:nth-child(#{$i}){
+        transform:rotateX(#{$i*45}deg);
+      }
+    }
+    
+  }
+  &.topLeft{
+    top:10px;
+    left:10px;
+  }
+  &.topRight{
+    top:10px;
+    right:10px;
+  }
+  &.bottomLeft{
+    bottom:10px;
+    left:10px;
+  }
+  &.bottomRight{
+    bottom:10px;
+    right:10px;
+  }
+}
+
+
+ 
